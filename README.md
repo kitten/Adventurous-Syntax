@@ -23,3 +23,7 @@ This is a *work in progress*.
 Please report any peculiar color combinations or circumstances under which code is rendered unreadable and ugly.
 
 Please also try to attach a screenshot, so it is easier to recognise the problem.
+
+## Screenshots
+
+![Screenshot](https://github.com/philplckthun/Adventurous-Syntax/raw/master/screenshot.jpg)
