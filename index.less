@@ -1,0 +1,302 @@
+@import "syntax-variables";
+
+.editor-colors, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor, :host {
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    border-right: 2px solid @syntax-gutter-background-color-selected;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      padding: 0 0.25em 0 0.5em;
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .scroll-view {
+    padding-left: 10px;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+.comment {
+  color: @ghostly;
+}
+
+.entity {
+
+  &.name.function {
+    color: @hyperactive;
+  }
+
+  &.name.type {
+    color: @light-orange;
+    text-decoration: underline;
+  }
+
+  &.other.attribute-name {
+    color: @warm !important;
+  }
+}
+
+.keyword {
+  color: @posh;
+
+  &.control {
+    color: @energetic !important;
+
+    .definition {
+      color: inherit;
+    }
+  }
+
+  &.operator {
+    color: @energetic !important;
+  }
+
+  &.other.unit {
+    color: @energetic !important;
+    font-style: italic;
+  }
+}
+
+.storage {
+  color: @warm;
+  font-style: italic;
+
+  &.modifier {
+    color: @posh;
+    font-style: normal;
+  }
+}
+
+.constant {
+  // color: @hyperactive;
+  color: @intensive;
+
+  &.numeric {
+    color: @energetic;
+  }
+
+  &.language {
+    color: @important;
+  }
+}
+
+.variable {
+  color: @passive;
+
+  &.assignment {
+    color: @warm;
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @cold;
+
+  &.regexp {
+    color: @cyan;
+
+    .source.ruby.embedded {
+      color: @bright-orange;
+    }
+  }
+
+  &.other.link {
+    color: @red;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @ghostly;
+    }
+
+    &.parameters,
+    &.array {
+      color: @syntax-text-color;
+    }
+
+    &.heading,
+    &.identity {
+      color: @blue;
+    }
+
+    &.bold {
+      color: @light-orange;
+      font-weight: bold;
+    }
+
+    &.italic {
+      color: @purple;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: @dark-red;
+  }
+}
+
+.entity {
+
+  &.name.class, &.name.type.class {
+    color: @positive;
+  }
+
+  &.name.section {
+    color: @blue;
+  }
+
+  &.name.tag {
+    color: @hyperactive;
+  }
+
+  &.other.attribute-name {
+    color: @hyperactive;
+
+    &.id {
+      color: @blue;
+    }
+  }
+}
+
+.meta {
+  &.class {
+    color: @light-orange;
+  }
+
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @blue;
+  }
+
+  &.selector {
+    color: @purple;
+  }
+
+  &.separator {
+    background-color: #373b41;
+    color: @syntax-text-color;
+  }
+
+  &.tag {
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @purple;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @blue;
+  }
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @red;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+}
+
+.source.gfm {
+  .markup {
+    -webkit-font-smoothing: auto;
+    &.heading {
+      color: @red;
+    }
+
+    &.link {
+      color: @blue;
+    }
+  }
+
+  .link .entity {
+    color: @cyan;
+  }
+}
+
+.editor.mini, :host([mini]) {
+  .scroll-view {
+    padding-left: 1px;
+  }
+}
