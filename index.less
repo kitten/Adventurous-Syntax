@@ -63,6 +63,12 @@
   color: @ghostly;
 }
 
+.support {
+  &.function {
+    color: @hyperactive;
+  }
+}
+
 .entity {
 
   &.name.function {
@@ -107,6 +113,11 @@
   &.modifier {
     color: @posh;
     font-style: normal;
+  }
+
+  &.import {
+    color: @energetic !important;
+    font-style: italic;
   }
 }
 
@@ -208,10 +219,6 @@
 }
 
 .meta {
-  &.class {
-    color: @light-orange;
-  }
-
   &.link {
     color: @orange;
   }
