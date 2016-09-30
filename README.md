@@ -8,6 +8,8 @@ Based on the Base16 Tomorrow Dark syntax theme by the Atom team.
 
 **Why?** Because Adventure Time's colours are crisp and awesome!
 
+> Searching for this theme for Vim? Check out [vim-adventurous](https://github.com/philpl/vim-adventurous).
+
 ## Installation
 
 Just search for **"Adventurous"** in the _Themes_ section and you'll find this theme.
